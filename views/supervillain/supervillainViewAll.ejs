@@ -1,0 +1,34 @@
+<%- include("../includes/header.ejs", {title:"Supervillain - View All"}); %>
+<h1>Supervillains</h1>
+<a href="/supervillain/add">Add New Supervillain</a> <br />
+
+<br />
+<table border="1">
+    <tr><th>Name</th><th>Secret Identity</th><th>Gender</th><th>Superpower</th><th>Arch-Enemy</th><th>Wears a Cape?</th>
+        <th>Place of Origin</th><th>Original Author</th><th>Brand</th><th>Publication Year</th><th>Action</th></tr>
+    <% for(var i=0; result.length > i; i++ ) { %>
+    <tr>
+        <td><a href="/supervillain/?villain_id=<%= result[i].villain_id %>"><%= result[i].villain_name %></a></td>
+        <td><%= result[i].secret_identity %></td>
+        <td><%= result[i].gender %></td>
+        <td><%= result[i].superpower %></td>
+        <td><%= result[i].super_name %></td>
+        <td><%= result[i].cape %></td>
+        <td><%= result[i].planet_name %></td>
+        <td><%= result[i].original_author %></td>
+        <td><%= result[i].brand_name %></td>
+        <td><%= result[i].publication_year %></td>
+        <td>
+            <button onclick="event.preventDefault();window.location.href='/supervillain/edit2/?villain_id=<%= result[i].villain_id %>'">Edit</button>
+            <form action="/supervillain/delete/" style="display:inline;">
+                <input type="hidden" name="villain_id" id="villain_id" value="<%= result[i].villain_id %>" />
+                <input type="submit" value="Delete"/>
+            </form>
+
+        </td>
+    </tr>
+    <% } %>
+</table>
+<br />
+<a href="/">Back to Comic Book Table</a>
+<%- include("../includes/footer.ejs"); %>

@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>Brand - <%= result[0].brand_name %></title>
+</head>
+<body>
+    <h1><%= result[0].brand_name %></h1>
+    <ul>
+        <li>Brand ID: <% result[0].brand_id %></li>
+        <li>Brand Name: <%= result[0].brand_name %></li>
+        <li>Year Founded: <%= result[0].year_founded %></li>
+    </ul>
+    <br/>
+    <a href="/comic/all">Back to Comics</a>
+</body>
+
+</html>

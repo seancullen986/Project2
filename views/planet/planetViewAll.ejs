@@ -1,0 +1,24 @@
+<%- include("../includes/header.ejs", {title:"Planets - View All"}); %>
+<h1>Planets</h1>
+<a href="/planet/add">Add New Planet</a> <br />
+
+<br />
+<table border="1">
+    <tr><th>Name</th><th>Action</th></tr>
+    <% for(var i=0; result.length > i; i++ ) { %>
+    <tr>
+        <td><a href="/planet/?planet_id=<%= result[i].planet_id %>"><%= result[i].planet_name %></a></td>
+        <td>
+            <button onclick="event.preventDefault();window.location.href='/planet/edit2/?planet_id=<%= result[i].planet_id %>'">Edit</button>
+            <form action="/planet/delete/" style="display:inline;">
+                <input type="hidden" name="planet_id" id="planet_id" value="<%= result[i].planet_id %>" />
+                <input type="submit" value="Delete"/>
+            </form>
+
+        </td>
+    </tr>
+    <% } %>
+</table>
+<br />
+<a href="/">Back to Comic Book Table</a>
+<%- include("../includes/footer.ejs"); %>

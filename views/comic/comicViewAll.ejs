@@ -1,0 +1,25 @@
+<%- include("../includes/header.ejs", {title:"Comics - View All"}); %>
+<h1>Comic Brands</h1>
+<a href="/comic/add">Add New Comic</a> <br />
+
+<br />
+<table border="1">
+    <tr><th>Brand</th><th>Year Founded</th><th>Action</th></tr>
+    <% for(var i=0; result.length > i; i++ ) { %>
+    <tr>
+        <td><a href="/comic/?brand_id=<%= result[i].brand_id %>"><%= result[i].brand_name %></a></td>
+        <td><%= result[i].year_founded %></td>
+        <td>
+            <button onclick="event.preventDefault();window.location.href='/comic/edit2/?brand_id=<%= result[i].brand_id %>'">Edit</button>
+            <form action="/comic/delete/" style="display:inline;">
+                <input type="hidden" name="brand_id" id="brand_id" value="<%= result[i].brand_id %>" />
+                <input type="submit" value="Delete"/>
+            </form>
+
+        </td>
+    </tr>
+    <% } %>
+</table>
+<br />
+<a href="/">Back to Comic Book Table</a>
+<%- include("../includes/footer.ejs"); %>

@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Superhero - <%= result[0].super_name %></title>
+</head>
+<body>
+
+    <h1><%= result[0].super_name%></h1>
+    <ul>
+        <li>Super ID: <% result[0].super_id%></li>
+        <li>Super Name: <%= result[0].super_name%></li>
+        <li>Secret Identity: <%= result[0].secret_identity %></li>
+        <li>Weakness: <%= result[0].weakness %></li>
+        <li>Superpower: <%= result[0].superpower %></li>
+        <li>Love Interest: <%= result[0].love_interest %></li>
+        <li>Gender: <%= result[0].gender %></li>
+        <li>Sidekick: <%= result[0].sidekick %></li>
+        <li>Cape? <%= result[0].cape %></li>
+        <li>Place of Origin: <%= result[0].planet_name %></li>
+        <li>Publisher:</li>
+        <ul>
+            <li>Brand Name: <%= result[0].brand_name %></li>
+            <li>Original Author: <%= result[0].original_author %></li>
+            <li>Publication Year: <%= result[0].publication_year %></li>
+        </ul>
+        <li>Arch-Enemy:</li>
+        <ul>
+            <li>Name: <%= result[0].villain_name %></li>
+            <li>Year Met: <%= result[0].year_met %></li>
+        </ul>
+    </ul>
+    <br/>
+    <a href="/superhero/all">Back to Schools</a>
+</body>
+
+</html>

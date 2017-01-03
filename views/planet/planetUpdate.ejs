@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>Update <%= planet.planet_name%></title>
+</head>
+<body>
+<h1>Update <%= planet.planet_name%></h1>
+<form action="/planet/update" method="get">
+    <input type="hidden" id="planet_id" name="planet_id" value="<%= planet.planet_id %>">
+    Planet Name: <input id="planet_name" name="planet_name" type="text" value="<%= planet.planet_name%>"/>
+    <br />
+    <br />
+
+    <input type="submit" />
+
+</form>
+<br/>
+<a href="/planet/all">Back to Planets</a>
+</body>
+
+</html>

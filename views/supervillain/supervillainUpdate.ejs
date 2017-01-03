@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Update <%= supervillain.villain_name%></title>
+</head>
+<body>
+<h1>Update <%= supervillain.villain_name%></h1>
+<form action="/supervillain/update" method="get">
+    <input type="hidden" id="villain_id" name="villain_id" value="<%= supervillain.villain_id %>">
+    supervillain Name: <input id="villain_name" name="villain_name" type="text" value="<%= supervillain.villain_name%>"/>
+    <br />
+    Secret Identity: <input id="secret_identity" name="secret_identity" type="text" value="<%= supervillain.secret_identity%>"/>
+    <br />
+    Gender: <input id="gender" name="gender" type="text" value="<%= supervillain.gender%>"/>
+    <br />
+    Superpower: <input id="superpower" name="superpower" type="text" value="<%= supervillain.superpower%>"/>
+    <br />
+    Cape? (yes/no): <input id="cape" name="cape" type="text" value="<%= supervillain.cape%>"/>
+    <br />
+    <br />
+
+    <input type="submit" />
+
+</form>
+<br/>
+<a href="/supervillain/all">Back to Supervillains</a>
+</body>
+
+</html>

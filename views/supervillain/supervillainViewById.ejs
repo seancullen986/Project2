@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Supervillain - <%= result[0].villain_name %></title>
+</head>
+<body>
+    <h1><%= result[0].villain_name %></h1>
+    <ul>
+        <li>Villain ID: <% result[0].villain_id %></li>
+        <li>Villain Name: <%= result[0].villain_name %></li>
+        <li>Secret Identity: <%= result[0].secret_identity %></li>
+        <li>Gender: <%= result[0].gender %></li>
+        <li>Superpower: <%= result[0].superpower %></li>
+        <li>Cape? <%= result[0].cape %></li>
+        <li>Place of Origin: <%= result[0].planet_name %></li>
+        <li>Publisher:</li>
+        <ul>
+            <li>Brand Name: <%= result[0].brand_name %></li>
+            <li>Original Author: <%= result[0].original_author %></li>
+            <li>Publication Year: <%= result[0].publication_year %></li>
+        </ul>
+        <li>Arch-Enemy:</li>
+        <ul>
+            <li>Name: <%= result[0].super_name %></li>
+            <li>Year Met: <%= result[0].year_met %></li>
+        </ul>
+    </ul>
+    <br/>
+    <a href="/supervillain/all">Back to Supervillains</a>
+</body>
+
+</html>

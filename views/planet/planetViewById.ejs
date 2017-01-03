@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>Planet - <%= result[0].planet_name %></title>
+</head>
+<body>
+    <h1><%= result[0].planet_name %></h1>
+    <ul>
+        <li>Planet ID: <% result[0].planet_id %></li>
+        <li>Planet Name: <%= result[0].planet_name %></li>
+    </ul>
+    <br/>
+    <a href="/planet/all">Back to Planets</a>
+</body>
+
+</html>

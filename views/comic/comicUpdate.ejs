@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Update <%= comic.brand_name%></title>
+</head>
+<body>
+<h1>Update <%= comic.brand_name%></h1>
+<form action="/comic/update" method="get">
+    <input type="hidden" id="brand_id" name="brand_id" value="<%= comic.brand_id %>">
+    Brand Name: <input id="brand_name" name="brand_name" type="text" value="<%= comic.brand_name%>"/>
+    <br />
+    Year Founded: <input id="year_founded" name="year_founded" type="text" value="<%= comic.year_founded%>"/>
+    <br />
+    <br />
+
+    <input type="submit" />
+
+</form>
+<br/>
+<a href="/comic/all">Back to Comics</a>
+</body>
+
+</html>
